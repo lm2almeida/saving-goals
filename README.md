@@ -7,7 +7,7 @@
 - [x] Initial commit removing boirlerplate
 - [x] Styles definition
 - [x] Header
-- [ ] Main page
+- [x] Main page
 - [ ] Saving Form
 - [ ] Saving Form Header
 - [ ] Input base
