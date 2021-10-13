@@ -12,6 +12,7 @@ const Main = styled.main`
 
 const Title = styled.h1`
   color: var(--colors-brand-primary);
+  margin-bottom: var(--spacing-xlarge);
 
   strong {
     font-weight: bold;
