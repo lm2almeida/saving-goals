@@ -8,8 +8,8 @@
 - [x] Styles definition
 - [x] Header
 - [x] Main page
-- [ ] Saving Form
-- [ ] Saving Form Header
+- [x] Saving Form
+- [ ] Saving Goal
 - [ ] Input base
   - [ ] Amount Input
   - [ ] Reach Date Input
