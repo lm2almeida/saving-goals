@@ -5,7 +5,7 @@
 ## TODO
 
 - [x] Initial commit removing boirlerplate
-- [ ] Styles definition
+- [x] Styles definition
 - [ ] Header
 - [ ] Main page
 - [ ] Saving Form
