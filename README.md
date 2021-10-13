@@ -11,7 +11,7 @@
 - [x] Saving Form
 - [x] Saving Goal
 - [x] Input base
-  - [ ] Amount Input
+  - [x] Amount Input
   - [ ] Reach Date Input
 - [ ] Monthly amount
 - [ ] Button
