@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Input should render component 1`] = `
+exports[`components/InputWrapper should render component 1`] = `
 <DocumentFragment>
   .c0 {
   width: 100%;

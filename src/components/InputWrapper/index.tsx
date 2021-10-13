@@ -17,7 +17,7 @@ export type Buttons = {
   right?: Button;
 };
 
-interface InputProps {
+interface InputWrapperProps {
   children: React.ReactNode;
   id: string;
   label: string;
@@ -41,7 +41,12 @@ function renderActionButton(
   );
 }
 
-function Input({ children, label, id, buttons }: InputProps): JSX.Element {
+function InputWrapper({
+  children,
+  label,
+  id,
+  buttons,
+}: InputWrapperProps): JSX.Element {
   return (
     <S.Container>
       <S.Label htmlFor={id}>{label}</S.Label>
@@ -54,4 +59,4 @@ function Input({ children, label, id, buttons }: InputProps): JSX.Element {
   );
 }
 
-export default Input;
+export default InputWrapper;

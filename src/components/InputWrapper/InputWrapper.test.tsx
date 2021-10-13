@@ -1,17 +1,17 @@
 import { render, RenderResult, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Input, { Buttons } from '.';
+import InputWrapper, { Buttons } from '.';
 
 function setup(buttons?: Buttons): RenderResult {
   return render(
-    <Input id="test" label="test" buttons={buttons || {}}>
+    <InputWrapper id="test" label="test" buttons={buttons || {}}>
       <input id="test" name="test" />
-    </Input>
+    </InputWrapper>
   );
 }
 
-describe('components/Input', () => {
+describe('components/InputWrapper', () => {
   it('should render component', () => {
     const { asFragment } = setup();
 
