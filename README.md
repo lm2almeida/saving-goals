@@ -9,7 +9,7 @@
 - [x] Header
 - [x] Main page
 - [x] Saving Form
-- [ ] Saving Goal
+- [x] Saving Goal
 - [ ] Input base
   - [ ] Amount Input
   - [ ] Reach Date Input
