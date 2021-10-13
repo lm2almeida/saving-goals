@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Input should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 100%;
+}
+
+.c0:not(:last-of-type) {
+  margin-bottom: var(--spacing-medium);
+}
+
+.c2 {
+  border: 1px solid var(--colors-blue-gray-50);
+  border-radius: var(--border-radius-small);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.c2 > * {
+  border: none;
+  background-color: var(--neutral-white);
+}
+
+.c1 {
+  color: var(--colors-gray-900);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width:1280px) {
+  .c0:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: var(--spacing-medium);
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .c1 {
+    font-size: 14px;
+  }
+}
+
+<fieldset
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="test"
+    >
+      test
+    </label>
+    <div
+      class="c2"
+    >
+      <input
+        id="test"
+        name="test"
+      />
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
