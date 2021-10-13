@@ -10,7 +10,7 @@
 - [x] Main page
 - [x] Saving Form
 - [x] Saving Goal
-- [ ] Input base
+- [x] Input base
   - [ ] Amount Input
   - [ ] Reach Date Input
 - [ ] Monthly amount
