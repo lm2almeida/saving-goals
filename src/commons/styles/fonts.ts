@@ -69,7 +69,7 @@ const fonts = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    font-family: var(--font-family-rubik);
+    font-family: var(--font-family-work-sans);
   }
 `;
 
