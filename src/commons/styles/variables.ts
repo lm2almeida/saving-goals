@@ -1,6 +1,8 @@
 import { cssVar, rgba } from 'polished';
 import { css } from 'styled-components';
 
+const DESKTOP_SIZE = '1280px';
+
 const variables = css`
   :root {
     --colors-blue-gray-10: #f4f8fa;
@@ -28,4 +30,5 @@ const variables = css`
   }
 `;
 
+export { DESKTOP_SIZE };
 export default variables;
