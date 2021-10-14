@@ -19,7 +19,12 @@ function SavingForm(): JSX.Element {
     <S.Form>
       <SavingGoal />
       <S.InputsContainer>
-        <AmountInput id="amount" name="amount" onChange={setAmount} />
+        <AmountInput
+          id="amount"
+          name="amount"
+          value={amount}
+          onChange={setAmount}
+        />
         <ReachDateInput
           id="reachDate"
           name="reachDate"

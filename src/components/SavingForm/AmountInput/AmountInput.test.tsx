@@ -5,7 +5,7 @@ import AmountInput from '.';
 
 describe('components/SavingForm/AmountInput', () => {
   beforeEach(() => {
-    render(<AmountInput id="test" name="test" onChange={jest.fn} />);
+    render(<AmountInput id="test" name="test" onChange={jest.fn} value="0" />);
   });
 
   it('should only accepts numbers and not negatives', () => {
@@ -13,7 +13,7 @@ describe('components/SavingForm/AmountInput', () => {
 
     userEvent.type(input, 'hello test');
 
-    expect(input).toHaveValue('');
+    expect(input).toHaveValue('0');
 
     userEvent.type(input, '-30');
 
