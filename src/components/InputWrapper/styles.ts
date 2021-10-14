@@ -8,8 +8,6 @@ interface ButtonWrapperProps {
 }
 
 const Container = styled.fieldset`
-  width: 100%;
-
   &:not(:last-of-type) {
     margin-bottom: var(--spacing-medium);
 

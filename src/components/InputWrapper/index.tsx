@@ -5,6 +5,7 @@ import * as S from './styles';
 type ButtonProps = {
   onClick?: () => void;
   disabled?: boolean;
+  label: string;
 };
 
 type Button = {
@@ -25,7 +26,7 @@ interface InputWrapperProps {
 }
 
 function renderActionButton(
-  { component, props: { disabled = false, onClick } }: Button,
+  { component, props: { disabled = false, onClick, label } }: Button,
   isLeft = false
 ) {
   const handleClick = () => {
@@ -35,7 +36,14 @@ function renderActionButton(
   };
 
   return (
-    <S.ButtonWrapper onClick={handleClick} disabled={disabled} isLeft={isLeft}>
+    <S.ButtonWrapper
+      onClick={handleClick}
+      disabled={disabled}
+      isLeft={isLeft}
+      type="button"
+      title={label}
+      aria-label={label}
+    >
       {component}
     </S.ButtonWrapper>
   );

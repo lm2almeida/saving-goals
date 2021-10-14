@@ -16,6 +16,7 @@ function AmountInput({ id, name }: AmountInputProps): JSX.Element {
     component: <DollarSVG />,
     props: {
       disabled: true,
+      label: 'dollar sign',
     },
   };
 
