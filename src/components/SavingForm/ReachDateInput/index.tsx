@@ -10,12 +10,17 @@ import * as S from './styles';
 interface ReachDateInputProps {
   id: string;
   name: string;
+  onChange: (value: { year: number; month: number }) => void;
 }
 
 const DECEMBER_MONTH = 11;
 const JANUARY_MONTH = 0;
 
-function ReachDateInput({ id, name }: ReachDateInputProps): JSX.Element {
+function ReachDateInput({
+  id,
+  name,
+  onChange,
+}: ReachDateInputProps): JSX.Element {
   const todayDate = new Date();
   const currentYear = todayDate.getFullYear();
   const currentMonth = todayDate.getMonth();
@@ -107,6 +112,10 @@ function ReachDateInput({ id, name }: ReachDateInputProps): JSX.Element {
 
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleDecrementMonth, handleIncrementMonth]);
+
+  useEffect(() => {
+    onChange({ year: yearValue, month: monthValue });
+  }, [monthValue, yearValue, onChange]);
 
   return (
     <InputWrapper id={id} label="Reach goal by" buttons={buttons}>

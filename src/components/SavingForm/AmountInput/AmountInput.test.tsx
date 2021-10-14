@@ -4,9 +4,11 @@ import userEvent from '@testing-library/user-event';
 import AmountInput from '.';
 
 describe('components/SavingForm/AmountInput', () => {
-  it('should only accepts numbers and not negatives', () => {
-    render(<AmountInput id="test" name="test" />);
+  beforeEach(() => {
+    render(<AmountInput id="test" name="test" onChange={jest.fn} />);
+  });
 
+  it('should only accepts numbers and not negatives', () => {
     const input = screen.getByRole('textbox', { name: /total amount/i });
 
     userEvent.type(input, 'hello test');
@@ -19,8 +21,6 @@ describe('components/SavingForm/AmountInput', () => {
   });
 
   it('should add trailing zeros on blur', () => {
-    render(<AmountInput id="test" name="test" />);
-
     const input = screen.getByRole('textbox', { name: /total amount/i });
 
     userEvent.type(input, '10.');

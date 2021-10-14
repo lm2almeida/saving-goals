@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import SavingGoal from './SavingGoal';
 import AmountInput from './AmountInput';
 import ReachDateInput from './ReachDateInput';
@@ -6,14 +8,25 @@ import MonthlyAmount from './MonthlyAmount';
 import * as S from './styles';
 
 function SavingForm(): JSX.Element {
+  const today = new Date();
+  const [amount, setAmount] = useState('0');
+  const [reachDate, setReachDate] = useState({
+    year: today.getFullYear(),
+    month: today.getMonth(),
+  });
+
   return (
     <S.Form>
       <SavingGoal />
       <S.InputsContainer>
-        <AmountInput id="amount" name="amount" />
-        <ReachDateInput id="reachDate" name="reachDate" />
+        <AmountInput id="amount" name="amount" onChange={setAmount} />
+        <ReachDateInput
+          id="reachDate"
+          name="reachDate"
+          onChange={setReachDate}
+        />
       </S.InputsContainer>
-      <MonthlyAmount totalAmount={0} reachGoal={{ year: 2021, month: 9 }} />
+      <MonthlyAmount totalAmount={+amount} reachGoal={reachDate} />
       <S.Button>Confirm</S.Button>
     </S.Form>
   );

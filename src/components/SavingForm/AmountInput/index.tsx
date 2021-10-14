@@ -8,16 +8,22 @@ import * as S from './styles';
 interface AmountInputProps {
   id: string;
   name: string;
+  onChange: (value: string) => void;
 }
 
-function AmountInput({ id, name }: AmountInputProps): JSX.Element {
-  const [amount, setAmount] = useState<string | undefined>();
+function AmountInput({ id, name, onChange }: AmountInputProps): JSX.Element {
+  const [amount, setAmount] = useState('');
   const button = {
     component: <DollarSVG />,
     props: {
       disabled: true,
       label: 'dollar sign',
     },
+  };
+
+  const handleChange = (value: string) => {
+    setAmount(value);
+    onChange(value);
   };
 
   const handleBlur = () => {
@@ -34,7 +40,7 @@ function AmountInput({ id, name }: AmountInputProps): JSX.Element {
         name={name}
         value={amount}
         allowNegativeValue={false}
-        onValueChange={(value) => setAmount(value)}
+        onValueChange={(value) => handleChange(value || '')}
         onBlur={handleBlur}
       />
     </InputWrapper>

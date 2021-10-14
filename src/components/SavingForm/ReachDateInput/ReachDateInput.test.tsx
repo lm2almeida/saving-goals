@@ -9,9 +9,11 @@ describe('components/SavingAmount/ReachDateInput', () => {
     jest.setSystemTime(new Date(2021, 9, 1));
   });
 
-  it('should not change value when typing', () => {
-    render(<ReachDateInput id="test" name="test" />);
+  beforeEach(() => {
+    render(<ReachDateInput id="test" name="test" onChange={jest.fn} />);
+  });
 
+  it('should not change value when typing', () => {
     const input = screen.getByLabelText(/reach goal by/i);
 
     userEvent.type(input, 'hello test');
@@ -20,16 +22,12 @@ describe('components/SavingAmount/ReachDateInput', () => {
   });
 
   it('should not change value for past months', () => {
-    render(<ReachDateInput id="test" name="test" />);
-
     userEvent.click(screen.getByLabelText(/decrement month/i));
 
     expect(screen.getByText(/october/i)).toBeInTheDocument();
   });
 
   it('should increment/decrement month and year', () => {
-    render(<ReachDateInput id="test" name="test" />);
-
     const incrementButton = screen.getByLabelText(/increment month/i);
     const decrementButton = screen.getByLabelText(/decrement month/i);
 
@@ -53,8 +51,6 @@ describe('components/SavingAmount/ReachDateInput', () => {
   });
 
   it('should increment/decrement month and year using keyboard', () => {
-    render(<ReachDateInput id="test" name="test" />);
-
     screen.getByLabelText(/reach goal by/i).focus();
 
     expect(screen.getByText(/october/i)).toBeInTheDocument();
