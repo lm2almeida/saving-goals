@@ -16,6 +16,7 @@ const variables = css`
     --colors-brand-secondary: #0079ff;
     --colors-neutral-white: #ffffff;
 
+    --spacing-xxsmall: 4px;
     --spacing-xsmall: 8px;
     --spacing-small: 12px;
     --spacing-medium: 16px;
