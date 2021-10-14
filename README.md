@@ -12,8 +12,8 @@
 - [x] Saving Goal
 - [x] Input base
   - [x] Amount Input
-  - [ ] Reach Date Input
-- [ ] Monthly amount
-- [ ] Button
+  - [x] Reach Date Input
+- [x] Monthly amount
+- [x] Button
 - [ ] Nice README
   - [ ] Remove this TODO list
