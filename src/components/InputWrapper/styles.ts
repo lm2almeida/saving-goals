@@ -19,7 +19,7 @@ const Container = styled.fieldset`
 `;
 
 const InputWrapper = styled.div`
-  border: 1px solid var(--colors-blue-gray-50);
+  border: var(--border-default);
   border-radius: var(--border-radius-small);
   display: flex;
   overflow: hidden;

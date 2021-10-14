@@ -7,7 +7,7 @@ exports[`components/InputWrapper should render component 1`] = `
 }
 
 .c2 {
-  border: 1px solid var(--colors-blue-gray-50);
+  border: var(--border-default);
   border-radius: var(--border-radius-small);
   display: -webkit-box;
   display: -webkit-flex;

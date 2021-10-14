@@ -4,7 +4,7 @@ import media from '../../../commons/styles/utils/media';
 const Container = styled.div`
   --padding: var(--spacing-xlarge);
 
-  border: 1px solid var(--colors-blue-gray-50);
+  border: var(--border-default);
   border-radius: var(--border-radius-large);
   margin-bottom: var(--spacing-xlarge);
   width: 100%;

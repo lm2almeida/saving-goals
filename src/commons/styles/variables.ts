@@ -25,6 +25,8 @@ const variables = css`
     --spacing-xxlarge: 32px;
     --spacing-xxxlarge: 48px;
 
+    --border-default: 1px solid var(--colors-blue-gray-50);
+
     --border-radius-small: 4px;
     --border-radius-large: 8px;
 
