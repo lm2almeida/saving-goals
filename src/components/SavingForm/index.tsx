@@ -8,11 +8,14 @@ import MonthlyAmount from './MonthlyAmount';
 import * as S from './styles';
 
 function SavingForm(): JSX.Element {
-  const today = new Date();
   const [amount, setAmount] = useState('0');
-  const [reachDate, setReachDate] = useState({
-    year: today.getFullYear(),
-    month: today.getMonth(),
+  const [reachDate, setReachDate] = useState(() => {
+    const today = new Date();
+
+    return {
+      year: today.getFullYear(),
+      month: today.getMonth(),
+    };
   });
 
   return (
@@ -28,6 +31,7 @@ function SavingForm(): JSX.Element {
         <ReachDateInput
           id="reachDate"
           name="reachDate"
+          value={reachDate}
           onChange={setReachDate}
         />
       </S.InputsContainer>

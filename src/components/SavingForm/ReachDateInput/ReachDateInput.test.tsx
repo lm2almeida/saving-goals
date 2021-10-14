@@ -10,7 +10,12 @@ describe('components/SavingAmount/ReachDateInput', () => {
   });
 
   beforeEach(() => {
-    render(<ReachDateInput id="test" name="test" onChange={jest.fn} />);
+    const today = new Date();
+    const value = { year: today.getFullYear(), month: today.getMonth() };
+
+    render(
+      <ReachDateInput id="test" name="test" onChange={jest.fn} value={value} />
+    );
   });
 
   it('should not change value when typing', () => {

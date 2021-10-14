@@ -7,10 +7,15 @@ import { ReactComponent as ChevronRightSVG } from '../../../assets/icons/chevron
 
 import * as S from './styles';
 
+interface ReachDateData {
+  year: number;
+  month: number;
+}
 interface ReachDateInputProps {
   id: string;
   name: string;
-  onChange: (value: { year: number; month: number }) => void;
+  value: ReachDateData;
+  onChange: (value: ReachDateData) => void;
 }
 
 const DECEMBER_MONTH = 11;
@@ -19,14 +24,12 @@ const JANUARY_MONTH = 0;
 function ReachDateInput({
   id,
   name,
+  value: { year, month },
   onChange,
 }: ReachDateInputProps): JSX.Element {
-  const todayDate = new Date();
-  const currentYear = todayDate.getFullYear();
-  const currentMonth = todayDate.getMonth();
   const [inputValue, setInputValue] = useState('');
-  const [monthValue, setMonthValue] = useState(currentMonth);
-  const [yearValue, setYearValue] = useState(currentYear);
+  const [monthValue, setMonthValue] = useState(month);
+  const [yearValue, setYearValue] = useState(year);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleChange = () => {
@@ -48,6 +51,10 @@ function ReachDateInput({
   }, [yearValue]);
 
   const handleDecrementMonth = useCallback(() => {
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
     setMonthValue((prevMonth) => {
       const newMonth = prevMonth - 1;
       const isNewMonthBeforeCurrentMont = newMonth < currentMonth;
@@ -65,7 +72,7 @@ function ReachDateInput({
 
       return newMonth;
     });
-  }, [currentMonth, currentYear, yearValue]);
+  }, [yearValue]);
 
   const buttons = {
     left: {
