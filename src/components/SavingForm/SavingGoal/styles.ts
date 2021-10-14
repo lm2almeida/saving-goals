@@ -20,7 +20,7 @@ const Title = styled.h2`
   color: var(--colors-blue-gray-900);
   font-family: var(--font-family-rubik);
   font-size: 24px;
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-xxsmall);
 `;
 
 const Subtitle = styled.span`

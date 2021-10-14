@@ -35,7 +35,7 @@ const Label = styled.label`
   color: var(--colors-gray-900);
   display: block;
   font-size: 12px;
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-xxsmall);
 
   ${media.desktop`
     font-size: 14px;
