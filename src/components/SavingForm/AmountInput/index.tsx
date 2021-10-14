@@ -48,6 +48,7 @@ function AmountInput({
         allowNegativeValue={false}
         onValueChange={(value) => handleChange(value)}
         onBlur={handleBlur}
+        maxLength={7}
       />
     </InputWrapper>
   );
