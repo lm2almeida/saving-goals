@@ -1,4 +1,4 @@
-import { ReactComponent as HouseSVG } from '../../assets/icons/buy-a-house.svg';
+import { ReactComponent as HouseSVG } from '../../../assets/icons/buy-a-house.svg';
 
 import * as S from './styles';
 
